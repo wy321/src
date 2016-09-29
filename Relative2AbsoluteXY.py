@@ -38,9 +38,9 @@ def Relative2AbsoluteXY(robot_abs,landmark_meas_xy):
     #Calculate Jacobian H2 with respect to X2
     H2 = [[np.cos(theta1), -np.sin(theta1)],
           [np.sin(theta1),  np.cos(theta1)]]
-    print R
-    print landmark_meas
-    print robot_abs     
+    #print R
+    #print landmark_meas
+    #print robot_abs     
     landmark_abs = np.array(np.dot(R,landmark_meas)) + np.array(robot_abs) 
     
     return [landmark_abs[0][0],landmark_abs[1][0]]
